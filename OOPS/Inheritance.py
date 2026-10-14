@@ -45,3 +45,68 @@ print("-------------------")
 # Access child methods
 print("Access child methods")
 emp_lead1.lead_info()
+
+
+print("==========================================")
+print("===================Hierarchal Inheritance=======================")
+'''
+Create a parent class Hyundai that has all car details, store details 
+Create a child class economy that inherits Hyundai class as well as displays economy cars
+Economy cars: Grand i10,Exter, Aura etc
+Create a child class premium that inherits Hyundai class as well as displays premium cars
+Premium cars: Creta Electric,IONIQ,Palisade etc
+'''
+
+class Hyundai:
+    manager = "Raman" # class attribute
+
+    @staticmethod
+    def welcome():
+        print("Welcome to Hyundai Showroom")
+    def display_info(cls):
+        print(F"Hello, I am {cls.manager}. We provide economy as well premium based cars. Share your budget and we will show you the right cars")
+
+class economyHyundai(Hyundai):
+    def __init__(self,max_pricerange):
+        super().__init__()
+        self.max_pricerange = max_pricerange
+
+    def display_economy(self):
+        # calling parent class methods
+        self.welcome()
+        self.display_info()
+        # writing child class method code
+        if self.max_pricerange>35:
+            print(f"Explore our premium range.")
+        else:
+            print(f"We have Grand i10,Exter, Aura etc cars that fall under your required price range")
+
+class premimumHyundai(Hyundai):
+    def __init__(self,max_pricerange):
+        super().__init__()
+        self.max_pricerange = max_pricerange
+
+    def display_premium(self):
+        # calling parent class methods
+        self.welcome()
+        self.display_info()
+        # writing child class method code
+        if self.max_pricerange>35:
+            print(f"We have Creta Electric,IONIQ,Palisade etc cars that fall under your required price range")
+        else:
+            print(f"THe minimum pricerange for premimum cars is 35 lakhs. Kindly explore our economy range that falls under your budget.")
+
+# Create instances of child classes
+print("Economy class")
+cust1 = economyHyundai(23)
+print(cust1.max_pricerange)
+print(cust1.manager)
+print("methods")
+cust1.display_economy()
+
+print("Premimum class")
+cust2 = premimumHyundai(45)
+print(cust2.manager)
+print(cust2.max_pricerange)
+print("methods")
+cust2.display_premium()
