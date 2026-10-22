@@ -1,0 +1,12 @@
+Assignment:
+
+1. Write a Python program to create a calculator class. Include methods for basic arithmetic operations.
+2. Write a Python program to create a class that represents a shape. Include methods to calculate its area and perimeter. 
+Implement subclasses for different shapes like circle, triangle, and square.
+3. Write a Python program to create a class representing a shopping cart. 
+Include methods for adding and removing items, and calculating the total price.
+4. Create a child class Bus that will inherit all of the variables and methods of the Vehicle class(parent class).
+Modify the contents of one of the parent class method(say vehicle class has speed method).
+5.  Write a Python program to create a Notebook class that maintains an internal list of notes. 
+Add an add_note(note) method that appends a new note to the list, and a show_notes() method that prints all stored notes.
+
